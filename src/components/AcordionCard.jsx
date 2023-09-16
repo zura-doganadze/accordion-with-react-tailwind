@@ -1,8 +1,8 @@
 import { useState } from "react";
 import AccordionItem from "./AccordionItem";
 import questions from "./data";
-import upcheveron from "../images/upchevron.svg" 
-import downcheveron from "../images/downCheveron.svg"
+import upcheveron from "../images/upchevron.svg";
+import downcheveron from "../images/downCheveron.svg";
 
 function AcordionCard() {
   const [active, setActive] = useState(null);
@@ -16,8 +16,10 @@ function AcordionCard() {
   };
 
   return (
-    <div>
-      <img src={upcheveron} alt="" />
+    <div className="flex flex-col max-w-lg mt-24 w-2/3 lg:ml-96 sm:ml-40 ml-16 mr-11">
+      <h1 className="text-white font-sans text-4xl uppercase flex justify-center mb-16">
+        faq
+      </h1>
       {questions.map((item) => (
         <AccordionItem
           handleClock={handleClock}
